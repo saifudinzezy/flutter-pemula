@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           title: Text("Hello world"),
         ),
         body: Center(
-          child: Heading(
+          child: BiggerText(
             text: "Hello World",
           ),
         ),
@@ -24,19 +24,32 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Heading extends StatelessWidget {
-  final String text;
+class BiggerText extends StatefulWidget {
+  final String texst;
 
-  Heading({required this.text});
+  const BiggerText({required this.texst});
+
+  @override
+  _BiggerTextState createState() => _BiggerTextState();
+}
+
+class _BiggerTextState extends State<BiggerText> {
+  double _textSize = 16.0;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(widget.texst, style: TextStyle(fontSize: _textSize)),
+        ElevatedButton(
+          child: Text("Perbesar"),
+          onPressed: (){
+            setState(() {
+              _textSize = 32.0;
+            });
+          })
+      ],
     );
   }
 }
