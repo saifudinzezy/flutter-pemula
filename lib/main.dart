@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,11 +12,28 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello, world!'),
+          title: Text("Hello world"),
         ),
         body: Center(
-          child: Text('Hello, world!'),
+          child: Text("Hello world!"),
         ),
+      ),
+    );
+  }
+}
+
+class Heading extends StatelessWidget {
+  final String text;
+
+  Heading({required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 24.0,
+        fontWeight: FontWeight.bold
       ),
     );
   }
