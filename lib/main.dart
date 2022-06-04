@@ -23,14 +23,10 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("First Screen"),
       ),
-      body: Container(
-        child: Text("Hi", style: TextStyle(fontSize: 40.0),),
-        decoration: BoxDecoration(
-          color: Colors.red,
-          border: Border.all(color: Colors.green, width: 3),
-          borderRadius: BorderRadius.circular(10)
-        ),
-      ),
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Text('Ini padding', style: TextStyle(fontSize: 30),),
+      )
     );
   }
 }
