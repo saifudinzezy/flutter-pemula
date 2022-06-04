@@ -23,12 +23,13 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("First Screen"),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Icon(Icons.share),
-          Icon(Icons.thumb_up),
-          Icon(Icons.thumb_down)
+      body: Column(
+        children: [
+          Text(
+            'sebuah judul',
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          ),
+          Text('Lorem ipsum dolor si amet')
         ],
       )
     );
