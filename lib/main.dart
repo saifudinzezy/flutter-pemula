@@ -25,9 +25,9 @@ class FirstScreen extends StatelessWidget {
       ),
       body: Container(
         child: Text("Hello World", style: TextStyle(fontSize: 40.0),),
-        color: Colors.blue,
-       padding: EdgeInsets.all(100),
-        margin: EdgeInsets.all(50),
+        decoration: BoxDecoration(
+          color: Colors.red
+        ),
       ),
     );
   }
