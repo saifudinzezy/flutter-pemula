@@ -23,8 +23,13 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("First Screen"),
       ),
-      body: Center(
-        child: Text('Ini padding', style: TextStyle(fontSize: 30),),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Icon(Icons.share),
+          Icon(Icons.thumb_up),
+          Icon(Icons.thumb_down)
+        ],
       )
     );
   }
