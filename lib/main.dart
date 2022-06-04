@@ -23,8 +23,7 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("First Screen"),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(30),
+      body: Center(
         child: Text('Ini padding', style: TextStyle(fontSize: 30),),
       )
     );
