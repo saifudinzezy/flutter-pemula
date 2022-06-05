@@ -18,7 +18,12 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              child: ElevatedButton(onPressed: (){}, child: Text("Tombol")),
+              child: TextButton(
+                  onPressed: (){
+
+                  },
+                  child: Text("Tombol")
+              ),
             )
           ],
         ),
