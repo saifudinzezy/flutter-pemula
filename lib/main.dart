@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              child: TextButton(
+              child: OutlinedButton(
                   onPressed: (){
 
                   },
