@@ -18,11 +18,12 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              child: OutlinedButton(
+              child: IconButton(
+                  icon: Icon(Icons.volume_up),
+                  tooltip: "Tambah volume",
                   onPressed: (){
 
                   },
-                  child: Text("Tombol")
               ),
             )
           ],
