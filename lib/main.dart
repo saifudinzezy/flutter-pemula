@@ -8,6 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Oswald',
+        //font default
+        primarySwatch: Colors.red,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('First Screen'),
@@ -15,12 +20,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Image.network(
-                'https://picsum.photos/200/300',
-                width: 200,
-                height: 200,
-              ),
-              Image.asset('images/chicken.png', width: 200, height: 200),
+              Text('Custom Font', style: TextStyle(fontFamily: 'Oswald', fontSize: 30,),)
             ],
           )
         ),
