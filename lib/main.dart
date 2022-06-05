@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  String? language;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,17 +20,23 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              child: IconButton(
-                  icon: Icon(Icons.volume_up),
-                  tooltip: "Tambah volume",
-                  onPressed: (){
-
+              child: DropdownButton<String>(
+                  items: const <DropdownMenuItem<String>>[
+                    DropdownMenuItem<String>(child: Text("Dart"), value: "Dart",),
+                    DropdownMenuItem<String>(child: Text("Java"), value: "Java",)
+                  ],
+                  value: language,
+                  hint: Text("Select language"),
+                  onChanged: (String? value) {
+                    setState(() {
+                      language = value;
+                    });
                   },
               ),
-            )
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }
