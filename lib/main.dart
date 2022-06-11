@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: Text('Widget ListView'),
             ),
-            body: ListView.builder(
+            body: ListView.separated(
                 itemBuilder: (BuildContext context, int index){
                   return Container(
                     height: 250,
@@ -33,6 +33,9 @@ class MyApp extends StatelessWidget {
                     ),
                   );
                 },
+              separatorBuilder: (BuildContext context, int index) {
+                return Divider();
+              },
               itemCount: numberList.length,
             )
         )
