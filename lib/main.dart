@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:dicoding/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:dicoding/detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DetailScreen(),
+      home: MainScreen(),
     );
   }
 }
